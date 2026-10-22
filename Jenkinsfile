@@ -3,15 +3,14 @@ pipeline {
         stages{
         stage('Build') {
             steps {
-                echo 'Building the Python application...'
-                bat 'python --version'
+                echo 'Building the Python application'
                 bat 'python -m py_compile app.py'
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Running application tests...'
+                echo 'Running application tests'
                 bat 'python -m unittest -v test_app.py'
             }
         }
