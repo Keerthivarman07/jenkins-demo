@@ -18,10 +18,10 @@ pipeline {
 
     post {
         success {
-            echo 'CI Pipeline completed successfully!'
+            echo 'success'
         }
         failure {
-            echo 'CI Pipeline failed. Check the console output.'
+            echo 'failure'
         }
     }
 }
